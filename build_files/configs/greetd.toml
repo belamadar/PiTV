@@ -1,0 +1,9 @@
+[terminal]
+tty = "tty1"
+type = "autologin"
+
+[user]
+name = "root"
+
+[default_session]
+command = "/usr/bin/weston-launch -- /usr/bin/kodi"
