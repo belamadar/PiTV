@@ -6,4 +6,5 @@ type = "autologin"
 name = "root"
 
 [default_session]
-command = "/usr/bin/weston-launch -- /usr/bin/kodi"
+command = "weston-launch -- flatpak run tv.kodi.Kodi"
+

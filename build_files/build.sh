@@ -7,12 +7,17 @@ sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-rel
 # Add RPM packages
 dnf5 install \
     weston \
-    moonlight-embedded \
-    kodi \
+    flatpak \
     greetd \
     pipewire \
     wireplumber \
     xorg-x11-server-Xwayland
+
+# Install Flatpaks
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install -y --system flathub tv.kodi.Kodi
+flatpak install -y --system flathub com.moonlight_stream.Moonlight
 
 # Configure greetd autologin
 install -Dm644 /ctx/configs/greetd.toml /etc/greetd/config.toml
